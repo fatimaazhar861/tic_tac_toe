@@ -1,0 +1,129 @@
+/* Base Styles */
+body {
+    font-family: 'Verdana', sans-serif; /* Modern and clean sans-serif font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f3e6f5; /* Soft unicorn pastel background */
+    color: #333; /* Dark text color for contrast */
+}
+
+.container {
+    text-align: center;
+    background: #fff; /* White background for the container */
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 500px; /* Set max-width for larger screens */
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: #d084e6; /* Unicorn pinkish-purple color for the header */
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0; /* Remove space between cells */
+    margin: 20px auto;
+    max-width: 360px; /* Ensure board doesn't exceed max width */
+    width: 100%;
+}
+
+.cell {
+    background-color: #ff8c94; /* Base fruity color for cells */
+    border: 2px solid #e2a4b4; /* Unicorn pink border */
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* White text color for contrast */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    aspect-ratio: 1; /* Ensures square shape */
+}
+
+.cell:nth-child(1) { background-color: #ff8c94; } /* Fruity pink */
+.cell:nth-child(2) { background-color: #f6e1a6; } /* Fruity yellow */
+.cell:nth-child(3) { background-color: #8cffd1; } /* Fruity turquoise */
+.cell:nth-child(4) { background-color: #a6e3e9; } /* Fruity mint */
+.cell:nth-child(5) { background-color: #e1b9f3; } /* Fruity lilac */
+.cell:nth-child(6) { background-color: #f5a7c5; } /* Fruity rose */
+.cell:nth-child(7) { background-color: #a0e7f0; } /* Fruity blue */
+.cell:nth-child(8) { background-color: #f6c0b8; } /* Fruity coral */
+.cell:nth-child(9) { background-color: #d5a1d8; } /* Fruity purple */
+
+.cell:hover {
+    background-color: #ffe1e1; /* Light fruity color on hover */
+    transform: scale(1.05);
+}
+
+#restartButton {
+    background-color: #7b8df3; /* Unicorn blue button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#restartButton:hover {
+    background-color: #9aafff; /* Lighter blue on hover */
+    transform: scale(1.05);
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d084e6; /* Unicorn pinkish-purple for status text */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    .cell {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    #restartButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #status {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 2.2rem; /* Adjust font size for medium-sized screens */
+    }
+
+    .cell {
+        font-size: 1.75rem; /* Adjust font size for medium-sized screens */
+    }
+
+    #restartButton {
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+
+    #status {
+        font-size: 1.1rem; /* Adjust font size for medium-sized screens */
+    }
+}
